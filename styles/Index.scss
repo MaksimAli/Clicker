@@ -1,0 +1,107 @@
+:root {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Nunito Sans";
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+}
+
+
+#container {
+  color: chartreuse;
+  background-color: #912F40;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+  
+}
+
+
+.powerups
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  padding: 1rem; 
+  gap: 1rem;
+}
+
+.playarea {
+  height: 50dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__clicker {
+    height: 50%;
+    transition: all .1s;
+    border-radius: 2rem;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+}
+
+.powerup{
+  font-size: 1.5rem;
+  background-color: #12021f;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  &:hover {
+    background-color: #12021f;
+  }
+    display:  grid;
+    gap: .4rem;
+    grid-template-columns:  repeat(3, auto);
+    &__title {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      
+    }
+    &__price{  
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+      &__amount{
+        grid-column: 3/4;
+      grid-row: 1/3;
+      font-size: 5rem;
+      justify-self: center;
+      align-self: center;
+      }
+      .profit {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: end;
+      }
+    }
+ 
+
+.counter {
+  &__persec {
+    font-size: 4rem;
+  }
+
+  &__current {
+    font-size: 6rem;
+  }
+}
+
+
